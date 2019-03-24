@@ -1,4 +1,5 @@
 require "yaml"
+require 'pry'
 
 def load_library file_path
   emoticons = YAML.load_file(file_path)
@@ -7,8 +8,7 @@ def load_library file_path
   hash[get_emoticon] = Hash.new
 
   emoticons.each do |k, v|
-    p k
-    p v
+    'binding.pry'
   end
 
 end
@@ -21,4 +21,4 @@ def get_english_meaning
   # code goes here
 end
 
-load_library('lib/emoticons.yml')
+
