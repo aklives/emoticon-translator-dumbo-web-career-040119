@@ -24,8 +24,11 @@ result
 end
 
 
-
-
-def get_english_meaning
-  # code goes here
+def get_english_meaning yaml_path, emoticon
+  hash = load_library(yaml_path)
+  result = hash["get_meaning"][emoticon]
+  if result == nil
+    result = "Sorry, that emoticon was not found"
+  end
+result
 end
