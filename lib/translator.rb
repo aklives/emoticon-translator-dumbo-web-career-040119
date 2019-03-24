@@ -16,14 +16,14 @@ end
 
 def get_japanese_emoticon yaml_path, emoticon
   hash = load_library(yaml_path)
-  result = hash["get_emoticon"][emoticon] 
+  result = hash["get_emoticon"][emoticon]
   if result == false
     result = "Sorry, that emoticon was not found"
   end
 result
 end
-    
-  
+
+
 end
 
 def get_english_meaning
